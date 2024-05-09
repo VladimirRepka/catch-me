@@ -1,0 +1,65 @@
+/*
+Theme Name: Moj web
+Theme URI: google.com
+Author: Vladimir Repka
+Author URI: http://vladimirrepka.eu/
+Description: Téma pre zábavu
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: zábava, hra, štýl
+*/
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.game-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+.pozadie {
+  background-image: url(./image/pozadie.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.liany {
+  background-image: url(./image/liany.png);
+  background-size: contain;
+  background-repeat: repeat-y;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  /*adjust s value for speed*/
+  animation: animatedBackground 1000s linear infinite;
+}
+@keyframes animatedBackground {
+  from {
+    background-position: center center;
+  }
+  /*use negative width if you want it to flow right to left else and positive for left to right*/
+  to {
+    background-position: center 40000cqb;
+  }
+}
